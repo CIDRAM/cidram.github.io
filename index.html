@@ -1,107 +1,137 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>CIDRAM</title>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <link rel="stylesheet" href="stylesheets/styles.css" />
-    <link rel="stylesheet" href="stylesheets/github-light.css" />
-    <link rel="shortcut icon" type="image/gif" href="data:image/gif;base64,R0lGODlhEAAQAMIBAAAAAGYAAJkAAMz//2YAAGYAAGYAAGYAACH5BAEKAAQALAAAAAAQABAAAANBCLrcKjBK+eKQN76RIb+g0oGewAmiZZbZRppnC0y0BgR4rutK8OWfn2jgI3KKxeHvyBwMkc0kIEp13nZYnGPLSAAAOw==" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+  <title>CIDRAM</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+  <link rel="stylesheet" href="stylesheets/styles.css" />
+  <link rel="stylesheet" href="stylesheets/github-light.css" />
+  <link rel="shortcut icon" type="image/gif" href="data:image/gif;base64,R0lGODlhEAAQAMIBAAAAAGYAAJkAAMz//2YAAGYAAGYAAGYAACH5BAEKAAQALAAAAAAQABAAAANBCLrcKjBK+eKQN76RIb+g0oGewAmiZZbZRppnC0y0BgR4rutK8OWfn2jgI3KKxeHvyBwMkc0kIEp13nZYnGPLSAAAOw==" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 </head>
+
 <body>
-    <div class="wrapper">
-      <header>
-        <h1>CIDRAM</h1>
-        <p>CIDRAM: Classless Inter-Domain Routing Access Manager.</p>
 
-        <p class="view"><a href="https://github.com/CIDRAM/CIDRAM">View the Project on GitHub <small>CIDRAM/CIDRAM</small></a></p>
+<div class="wrapper">
 
+  <header>
+    <h1>CIDRAM</h1>
+    <p>CIDRAM: Classless Inter-Domain Routing Access Manager.</p>
+    <p class="view"><a href="https://github.com/CIDRAM/CIDRAM">View the Project on GitHub <small>CIDRAM/CIDRAM</small></a></p>
+    <ul>
+      <li><a href="https://github.com/CIDRAM/CIDRAM/zipball/master">Download <strong>ZIP File</strong></a></li>
+      <li><a href="https://github.com/CIDRAM/CIDRAM/tarball/master">Download <strong>TAR Ball</strong></a></li>
+      <li><a href="https://github.com/CIDRAM/CIDRAM">View On <strong>GitHub</strong></a></li>
+    </ul>
+  </header>
 
-        <ul>
-          <li><a href="https://github.com/CIDRAM/CIDRAM/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/CIDRAM/CIDRAM/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/CIDRAM/CIDRAM">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-<section>
-<h3>
-<a id="what-is-cidram" class="anchor" href="#what-is-cidram" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>What is CIDRAM?</strong>
-</h3>
+  <section>
+    <h3>
+      <a id="what-is-cidram" class="anchor" href="#what-is-cidram" aria-hidden="true">
+        <span class="octicon octicon-link"></span>
+      </a>
+      <strong>What is CIDRAM?</strong>
+    </h3>
+    <p>
+      CIDRAM (Classless Inter-Domain Routing Access Manager) is a PHP script designed to protect websites by blocking requests
+      originating from IP addresses regarded as being sources of undesirable traffic, including (but not limited to) traffic
+      from non-human access endpoints, cloud services, spambots, scrapers, etc. It does this by calculating the possible CIDRs
+      of the IP addresses supplied from inbound requests and then attempting to match these possible CIDRs against its
+      signature files (these signature files contain lists of CIDRs of IP addresses regarded as being sources of undesirable
+      traffic); If matches are found, the requests are blocked. For information regarding <em>HOW TO INSTALL</em> and <em>HOW
+      TO USE</em> CIDRAM, please refer to the documentation included within the
+      "<a href="https://github.com/CIDRAM/CIDRAM/tree/master/_docs">_docs</a>" directory of
+      <a href="https://github.com/CIDRAM/CIDRAM">this repository</a> (direct links to that documentation included under the
+      "Documentation" header below this paragraph).
+    </p>
+  </section>
 
-<p>CIDRAM (Classless Inter-Domain Routing Access Manager) is a PHP script designed to protect websites by blocking requests originating from IP addresses regarded as being sources of undesirable traffic, including (but not limited to) traffic from non-human access endpoints, cloud services, spambots, scrapers, etc. It does this by calculating the possible CIDRs of the IP addresses supplied from inbound requests and then attempting to match these possible CIDRs against its signature files (these signature files contain lists of CIDRs of IP addresses regarded as being sources of undesirable traffic); If matches are found, the requests are blocked. For information regarding <em>HOW TO INSTALL</em> and <em>HOW TO USE</em> CIDRAM, please refer to the documentation included within the "<a href="https://github.com/CIDRAM/CIDRAM/tree/master/_docs">_docs</a>" directory of <a href="https://github.com/CIDRAM/CIDRAM">this repository</a> (direct links to that documentation included under the "Documentation" header below this paragraph).</p>
+  <section>
+    <h3>
+      <a id="features" class="anchor" href="#features" aria-hidden="true">
+        <span class="octicon octicon-link"></span>
+      </a>
+      Features:
+    </h3>
+    <ul>
+      <li>Licensed as <a href="https://github.com/CIDRAM/CIDRAM/blob/master/_docs/LICENSE">GNU General Public License version 2.0</a> (GPLv2).</li>
+      <li>Easy to install, easy to customise, easy to use.</li>
+      <li>Works for any system with PHP+PCRE installed, regardless of OS (PHP+PCRE required).</li>
+      <li>Fully configurable based on your needs.</li>
+      <li>Ideal solution for websites and forum systems using shared hosting services.</li>
+      <li>Does NOT require shell access.</li>
+      <li>Does NOT require administrative privileges.</li>
+      <li>Good, strong, stable support base.</li>
+    </ul>
+  </section>
 
-</section>
-<section>
-<h3>
-<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features:</h3>
+  <section>
+    <h3>
+      <a id="documentation" class="anchor" href="#documentation" aria-hidden="true">
+        <span class="octicon octicon-link"></span>
+      </a>
+      Documentation:
+    </h3>
+    <ul>
+       <li><a href="https://github.com/CIDRAM/CIDRAM/blob/master/_docs/readme.en.md">English</a></li>
+       <li><a href="https://github.com/CIDRAM/CIDRAM/blob/master/_docs/readme.ar.md" lang="ar">العربية</a></li>
+       <li><a href="https://github.com/CIDRAM/CIDRAM/blob/master/_docs/readme.de.md" lang="de">Deutsch</a></li>
+       <li><a href="https://github.com/CIDRAM/CIDRAM/blob/master/_docs/readme.es.md" lang="es">Español</a></li>
+       <li><a href="https://github.com/CIDRAM/CIDRAM/blob/master/_docs/readme.fr.md" lang="fr">Français</a></li>
+       <li><a href="https://github.com/CIDRAM/CIDRAM/blob/master/_docs/readme.id.md" lang="id">Bahasa Indonesia</a></li>
+       <li><a href="https://github.com/CIDRAM/CIDRAM/blob/master/_docs/readme.it.md" lang="it">Italiano</a></li>
+       <li><a href="https://github.com/CIDRAM/CIDRAM/blob/master/_docs/readme.ja.md" lang="ja">日本語</a></li>
+       <li><a href="https://github.com/CIDRAM/CIDRAM/blob/master/_docs/readme.ko.md" lang="ko">한국어</a></li>
+       <li><a href="https://github.com/CIDRAM/CIDRAM/blob/master/_docs/readme.nl.md" lang="nl">Nederlandse</a></li>
+       <li><a href="https://github.com/CIDRAM/CIDRAM/blob/master/_docs/readme.pt.md" lang="pt">Português</a></li>
+       <li><a href="https://github.com/CIDRAM/CIDRAM/blob/master/_docs/readme.ru.md" lang="ru">Русский</a></li>
+       <li><a href="https://github.com/CIDRAM/CIDRAM/blob/master/_docs/readme.ur.md" lang="ur">اردو</a></li>
+       <li><a href="https://github.com/CIDRAM/CIDRAM/blob/master/_docs/readme.vi.md" lang="vi">Tiếng Việt</a></li>
+       <li><a href="https://github.com/CIDRAM/CIDRAM/blob/master/_docs/readme.zh.md" lang="zh">中文（简体）</a></li>
+       <li><a href="https://github.com/CIDRAM/CIDRAM/blob/master/_docs/readme.zh-TW.md" lang="zh-TW">中文（傳統）</a></li>
+    </ul>
+    <p><a href="https://github.com/CIDRAM/CIDRAM/blob/master/CONTRIBUTING.md">[CONTRIBUTING.md] <strong>Want to help?</strong></a></p>
+  </section>
 
-<ul>
-<li>Licensed as <a href="https://github.com/CIDRAM/CIDRAM/blob/master/_docs/LICENSE">GNU General Public License version 2.0</a> (GPLv2).</li>
-<li>Easy to install, easy to customise, easy to use.</li>
-<li>Works for any system with PHP+PCRE installed, regardless of OS (PHP+PCRE required).</li>
-<li>Fully configurable based on your needs.</li>
-<li>Ideal solution for websites and forum systems using shared hosting services.</li>
-<li>Does NOT require shell access.</li>
-<li>Does NOT require administrative privileges.</li>
-<li>Good, strong, stable support base.</li>
-</ul>
+  <section>
+    <h3>
+      <a id="alsoworth" class="anchor" href="#alsoworth" aria-hidden="true">
+        <span class="octicon octicon-link"></span>
+      </a>
+      Also worth checking out:
+    </h3>
+    <ul>
+      <li><a href="https://bitbucket.org/macmathan/blocklists">macmathan/blocklists</a>: Contains optional blocklists and modules for CIDRAM such as for blocking dangerous bots, unwanted countries, outdated browsers, etc.</li>
+      <li><a href="https://maikuolan.github.io/Vulnerability-Charts/">Vulnerability Charts</a>: Lists safe/unsafe versions of various packages (PHP, HHVM, etc).</li>
+      <li><a href="https://maikuolan.github.io/Compatibility-Charts/">Compatibility Charts</a>: Lists compatibility information for various packages (CIDRAM, phpMussel, etc).</li>
+    </ul>
+  </section>
 
-</section>
-<section>
-<h3>
-<a id="documentation" class="anchor" href="#documentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Documentation:</h3>
+  <section>
+    <h3>
+      <a id="badges-div" class="anchor" href="#badges-div" aria-hidden="true">
+        <span class="octicon octicon-link"></span>
+      </a>
+      Badges:
+    </h3>
+    <p>
+      <a href="https://insight.sensiolabs.com/projects/893a5dfb-d203-433f-9364-b8898e83c30d"><img src="https://insight.sensiolabs.com/projects/893a5dfb-d203-433f-9364-b8898e83c30d/small.png" alt="SensioLabsInsight" style="padding-left:10px;padding-right:10px;border:0" /></a>
+    </p>
+  </section>
 
-<ul>
-<li><strong><a href="https://github.com/CIDRAM/CIDRAM/blob/master/_docs/readme.en.md">English</a></strong></li>
-<li><strong><a href="https://github.com/CIDRAM/CIDRAM/blob/master/_docs/readme.ar.md" lang="ar">العربية</a></strong></li>
-<li><strong><a href="https://github.com/CIDRAM/CIDRAM/blob/master/_docs/readme.de.md" lang="de">Deutsch</a></strong></li>
-<li><strong><a href="https://github.com/CIDRAM/CIDRAM/blob/master/_docs/readme.es.md" lang="es">Español</a></strong></li>
-<li><strong><a href="https://github.com/CIDRAM/CIDRAM/blob/master/_docs/readme.fr.md" lang="fr">Français</a></strong></li>
-<li><strong><a href="https://github.com/CIDRAM/CIDRAM/blob/master/_docs/readme.id.md" lang="id">Bahasa Indonesia</a></strong></li>
-<li><strong><a href="https://github.com/CIDRAM/CIDRAM/blob/master/_docs/readme.it.md" lang="it">Italiano</a></strong></li>
-<li><strong><a href="https://github.com/CIDRAM/CIDRAM/blob/master/_docs/readme.ja.md" lang="ja">日本語</a></strong></li>
-<li><strong><a href="https://github.com/CIDRAM/CIDRAM/blob/master/_docs/readme.ko.md" lang="ko">한국어</a></strong></li>
-<li><strong><a href="https://github.com/CIDRAM/CIDRAM/blob/master/_docs/readme.nl.md" lang="nl">Nederlandse</a></strong></li>
-<li><strong><a href="https://github.com/CIDRAM/CIDRAM/blob/master/_docs/readme.pt.md" lang="pt">Português</a></strong></li>
-<li><strong><a href="https://github.com/CIDRAM/CIDRAM/blob/master/_docs/readme.ru.md" lang="ru">Русский</a></strong></li>
-<li><strong><a href="https://github.com/CIDRAM/CIDRAM/blob/master/_docs/readme.ur.md" lang="ur">اردو</a></strong></li>
-<li><strong><a href="https://github.com/CIDRAM/CIDRAM/blob/master/_docs/readme.vi.md" lang="vi">Tiếng Việt</a></strong></li>
-<li><strong><a href="https://github.com/CIDRAM/CIDRAM/blob/master/_docs/readme.zh.md" lang="zh">中文（简体）</a></strong></li>
-<li><strong><a href="https://github.com/CIDRAM/CIDRAM/blob/master/_docs/readme.zh-TW.md" lang="zh-TW">中文（傳統）</a></strong></li>
-</ul>
+  <footer>
+    <p>
+      <small>
+        <a href="https://github.com/CIDRAM/CIDRAM/graphs/contributors">Contributors</a> | <a href="https://github.com/orgs/CIDRAM/people">People</a><br />
+        Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a> (modified).<br />
+        <em>Last modified: <time datetime="2018-10-12">October 12, 2018 (2018.10.12)</time>.</em>
+      </small>
+    </p>
+  </footer>
 
-<p><a href="https://github.com/CIDRAM/CIDRAM/blob/master/CONTRIBUTING.md">[CONTRIBUTING.md] <strong>Want to help?</strong></a></p>
-
-</section>
-<section>
-<h3>
-<a id="alsoworth" class="anchor" href="#alsoworth" aria-hidden="true"><span class="octicon octicon-link"></span></a>Also worth checking out:</h3>
-
-<ul>
-  <li><strong><a href="https://github.com/macmathan/Blocklists">macmathan/Blocklists</a>:</strong> Contains optional extra blocklists for CIDRAM.</li>
-  <li><strong><a href="https://maikuolan.github.io/Vulnerability-Charts/">Vulnerability Charts</a>:</strong> Lists safe/unsafe versions of various packages (PHP, HHVM, etc).</li>
-  <li><strong><a href="https://maikuolan.github.io/Compatibility-Charts/">Compatibility Charts</a>:</strong> Lists compatibility information for various packages (CIDRAM, phpMussel, etc).</li>
-</ul>
-
-</section>
-<section>
-<h3><a id="badges-div" class="anchor" href="#badges-div" aria-hidden="true"><span class="octicon octicon-link"></span></a>Badges:</h3>
-
-<p><a href="https://insight.sensiolabs.com/projects/893a5dfb-d203-433f-9364-b8898e83c30d"><img src="https://insight.sensiolabs.com/projects/893a5dfb-d203-433f-9364-b8898e83c30d/small.png" alt="SensioLabsInsight" style="padding-left:10px;padding-right:10px;border:0" /></a></p>
-
-</section>
-<footer>
-  <p><small>
-    <a href="https://github.com/CIDRAM/CIDRAM/graphs/contributors">Contributors</a> | <a href="https://github.com/orgs/CIDRAM/people">People</a><br />
-    Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a> (modified).<br />
-    <em>Last modified: <time datetime="2018-05-31">May 31, 2018 (2018.05.31)</time>.</em>
-  </small></p>
-</footer>
 </div>
+
 <script src="javascripts/scale.fix.js"></script>
+
 </body>
 </html>
